@@ -1,5 +1,9 @@
 import subprocess
 subprocess.check_call(["pip", "install", "-r", "requirements_food101.txt"])
+import subprocess
+import sys
+
+subprocess.check_call([sys.executable, "-m", "pip", "install", "opencv-python"])
 
 import streamlit as st
 import numpy as np
