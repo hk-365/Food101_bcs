@@ -1,4 +1,5 @@
-!pip install opencv-python
+pip install -r requirements_food101.txt
+
 
 import streamlit as st
 import numpy as np
