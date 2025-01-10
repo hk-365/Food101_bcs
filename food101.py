@@ -1,5 +1,5 @@
-pip install -r requirements_food101.txt
-
+import subprocess
+subprocess.check_call(["pip", "install", "-r", "requirements_food101.txt"])
 
 import streamlit as st
 import numpy as np
