@@ -1,4 +1,5 @@
 import subprocess
+pip uninstall opencv-python
 subprocess.check_call(["pip", "install", "-r", "requirements_food101.txt"])
 
 
