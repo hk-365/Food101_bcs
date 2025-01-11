@@ -2,9 +2,10 @@ import subprocess
 
 subprocess.run(["pip", "install", "-r", "requirements.txt"])
 
-git add requirements.txt README.md
-git commit -m "Added OpenCV dependency"
-git push
+subprocess.run(["git", "add", "requirements.txt", "README.md"])
+subprocess.run(["git", "commit", "-m", """, ])
+subprocess.run(["git", "commit", "-m", "Added OpenCV dependency"])
+subprocess.run(["git", "push"])
 
 
 import streamlit as st
