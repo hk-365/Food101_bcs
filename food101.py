@@ -9,7 +9,6 @@ subprocess.run(["git", "push"])
 
 import streamlit as st
 import numpy as np
-import cv2
 from tensorflow.keras.models import load_model
 from tensorflow.keras.applications.resnet50 import preprocess_input
 from PIL import Image
@@ -43,12 +42,14 @@ Food_list = {
 
 # Define the prediction function
 def predict_food(image):
-    img = cv2.resize(np.array(image), (128, 128))  # Resize to match model input size
-    img = preprocess_input(img)
-    img = np.expand_dims(img, axis=0)
-    prediction = model.predict(img)
-    predicted_class = np.argmax(prediction, axis=1)[0]
-    confidence = np.max(prediction)
+    # Resize image using Pillow to match model input size
+    image = image.resize((128, 128))
+    img = np.array(image)  # Convert the PIL image to a NumPy array
+    img = preprocess_input(img)  # Preprocess the input (assumes your model's preprocess_input function)
+    img = np.expand_dims(img, axis=0)  # Add a batch dimension
+    prediction = model.predict(img)  # Make predictions
+    predicted_class = np.argmax(prediction, axis=1)[0]  # Get the class index with the highest score
+    confidence = np.max(prediction)  # Get the confidence score
     return Food_list[predicted_class], confidence
 
 # Streamlit App
