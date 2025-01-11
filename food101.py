@@ -1,6 +1,6 @@
 import subprocess
 
-subprocess.run(["pip", "install", "-r", "requirements.txt"])
+subprocess.run(["pip", "install", "-r", "requirements_food101.txt"])
 
 subprocess.run(["git", "add", "requirements.txt", "README.md"])
 subprocess.run(["git", "commit", "-m", "Added OpenCV dependency"])
