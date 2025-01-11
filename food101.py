@@ -1,6 +1,7 @@
-import subprocess
-pip uninstall opencv-python
-subprocess.check_call(["pip", "install", "-r", "requirements_food101.txt"])
+pip install -r requirements.txt
+git add requirements.txt README.md
+git commit -m "Added OpenCV dependency"
+git push
 
 
 import streamlit as st
