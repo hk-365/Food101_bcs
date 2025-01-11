@@ -1,12 +1,3 @@
-import subprocess
-
-subprocess.run(["pip", "install", "-r", "requirements_food101.txt"])
-
-subprocess.run(["git", "add", "requirements_food101.txt", "README.md"])
-subprocess.run(["git", "commit", "-m", "Added OpenCV dependency"])
-subprocess.run(["git", "push"])
-
-
 import streamlit as st
 import numpy as np
 from tensorflow.keras.models import load_model
