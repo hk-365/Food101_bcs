@@ -1,4 +1,7 @@
-pip install -r requirements.txt
+import subprocess
+
+subprocess.run(["pip", "install", "-r", "requirements.txt"])
+
 git add requirements.txt README.md
 git commit -m "Added OpenCV dependency"
 git push
